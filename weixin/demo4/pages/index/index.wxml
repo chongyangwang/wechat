@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="swiper_content">
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" indicator-active-color="orange" current="2" interval="{{interval}}" duration="{{duration}}" bindchange="bindChange" bindanimationfinish="bindanimationfinish" >
+      <view wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+<button bindtap="changeIndicatorDots"> indicator-dots </button>
+<button bindtap="changeAutoplay"> autoplay </button>
+<slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+<slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+</view>

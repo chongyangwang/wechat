@@ -1,0 +1,14 @@
+<!--index.wxml-->
+   <view class="container">
+    <!-- <camera device-position="front" flash="off" binderror="error" style="width: 100%; height: 160px;"></camera> -->
+   <view>
+      <video src="{{videoSrc}}"  controls ></video>
+   </view>
+    <view class="banner" style="width:100%;height:160px;">
+     <image  style="width:100%;height:100%;display:block;" src="{{Imgsrc}}" mode="scaleToFill"></image>
+   </view>
+   <button style="width:95%; margin:10rpx auto;" type="primary" size="mini" bindtap='takePhoto'>拍照</button>
+    <button style="width:95%; margin:10rpx auto;" type="primary" size="mini" bindtap='chooseImage'>选择图片</button>
+    <button style="width:95%; margin:10rpx auto;" type="primary" size="mini" bindtap='startRecord'>开始录像</button>
+    <button style="width:95%; margin:10rpx auto;" type="primary" size="mini" bindtap='stopRecord'>结束录像</button>
+</view>

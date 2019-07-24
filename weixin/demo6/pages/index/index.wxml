@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view class="container">
+  <block>
+    <view>rich-text</view>
+    <rich-text nodes="{{nodes}}" bindtap="tap"></rich-text>
+  </block>
+  <block>
+   <view>progress无效</view>
+    <progress 
+      percent="20" 
+      stroke-width="5"
+      color="#09BB07" 
+      activeColor="{{activeColor}}" backgroundColor="red"/>
+  </block>
+  <block>
+     <view>checkbox</view>
+     <view>
+      <checkbox-group bindchange="checkboxChange">
+        <view  wx:for="{{items}}" wx:key="index">
+          <label class="checkbox">{{item.value}}</label>
+          <checkbox value="{{item.name}}" checked="{{item.checked}}"/>
+        </view>
+      </checkbox-group>
+     </view>
+  </block>
+  <block>
+    <view>input</view>
+    <view>
+      <view class="section">
+        <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+      </view>
+      <view class="section">
+        <input placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+        <view class="btn-area">
+          <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+        </view>
+      </view>
+      <view class="section">
+        <input  maxlength="10" placeholder="最大输入长度10" />
+      </view>
+      <view class="section">
+        <view class="section__title">你输入的是：{{inputValue}}</view>
+        <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/>
+      </view>
+      <view class="section">
+        <input  bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+      </view>
+      <view class="section">
+        <input password type="number" />
+      </view>
+      <view class="section">
+        <input password type="text" />
+      </view>
+      <view class="section">
+        <input type="digit" placeholder="带小数点的数字键盘"/>
+      </view>
+      <view class="section">
+        <input type="idcard" placeholder="身份证输入键盘" />
+      </view>
+      <view class="section">
+        <input placeholder-style="color:red" placeholder="占位符字体是红色的" />
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class="section section_gap">
+      <text class="section__title">设置step</text>
+      <view class="body-view">
+        <slider bindchange="slider2change" step="5"/>
+      </view>
+    </view>
+  </block>
+  <block>
+    <view class="body-view">
+      <switch checked bindchange="switch1Change"/>
+      <switch bindchange="switch2Change"/>
+    </view>
+  </block>
+</view>

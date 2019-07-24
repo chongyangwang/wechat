@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- <import src="../head/head.wxml" />
+  <template is="header" data="{{pageTitle: '微信'}}" /> -->
+  <view class='section_content'>
+    <view class='product_item' wx:for='{{list}}' wx:key='id' wx:for-index='ind' wx:for-item='product'>
+      <view class='product_item_left'>
+        <image src='{{product.url}}' mode='scaleToFill'></image>
+      </view>
+      <view class='product_item_right'>
+        <view class='product_item_right_section'>
+          <text class='right_listItem_title'>{{product.product_name}}</text>
+          <text class='right_listItem_content'>{{product.product_direction}}</text>
+        </view>
+        <view class='product_item_right_slider'>
+          <text class='slider_time'>{{product.enter_time}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <import src="../foot/foot.wxml" />
+  <template is="footer" data="{{pageEndTitle: '曾梦想仗剑走天涯'}}" /> -->
+    <view class='foot'>
+        <text>曾梦想仗剑走天涯</text>
+    </view>
+</view>

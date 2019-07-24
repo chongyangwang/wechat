@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<view class="container">
+  <block>
+    <button style="width:95%; margin:10rpx auto;" type="primary" size="mini" bindtap='startRecorder'>开始录音</button>
+  </block>
+</view>

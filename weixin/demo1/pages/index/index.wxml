@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='container_content'>
+    <!-- 数据绑定 -->
+    <view class='view_item'>
+      <text class='text_item'>对话信息:{{showMsg}}</text>
+      <text class='text_item'>点击次数:{{count}}</text>
+      <text class='text_item'>输入输出属性：{{InOut}}</text>
+    </view>
+    <!-- 事件绑定 -->
+    <view class='view_item'>
+      <button id='click0' data-in='in' data-out='out' bindtap='clickMe'>click0</button>
+      <button id='click1' data-in='in' data-out='out' bindtap='clickMe'>click1</button>
+    </view>
+    <!-- 列表渲染 -->
+    <view class='view_item'>
+       <block wx:for="{{iconStyles}}" wx:key='size'>
+         <icon type='{{item.type}}' size='{{item.size}}' color='{{item.color}}'></icon>
+       </block>
+    </view>
+    <!-- button组建 -->
+    <view class='view_item_btncont'>
+       <button size='mini' type='warn'>button1</button>
+       <button size='large' type='primary'>button2</button>
+       <button type='default' plain>button3</button>
+       <button loading>button4</button>
+       <button disabled>button5</button>
+       <button disabled='{{disabled}}'>假禁用</button>
+       <button loading='{{loading}}'>假加载</button>
+       <button open-type="contact">进入客服会话</button>
+       <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+       <button open-type="openSetting">打开授权设置页</button>
+    </view>
+    <!-- 条件渲染 -->
+    <view class='view_item'>
+        <view wx:if='{{number>5}}'>大于5</view>
+        <view wx:elif='{{number<5}}'>小于5</view>
+        <view wx:else>等于5</view>
+        <block wx:if='{{number>5}}'>
+         <view>你一无所有 有什么理由傲娇</view>
+         <view>不气盛还叫年轻人嘛</view>
+        </block>
+        <view wx:hidden='{{switchFlag}}'>
+           {{talkContent}}
+        </view>
+        <button size='large' type='primary' bindtap='showTalk'>切换显示</button>
+    </view>
+    <!-- 模板渲染 -->
+    <view class='view_item'>
+      <!-- 模板定义 -->
+      <template name='viewTemplate' >
+        <block>
+          <text>模板名字：{{viewTemplateName}}</text>
+          <text>模板属性：{{viewTemplateAttribute}}</text>
+          <text>模板内容: {{viewTemplateContent}}</text>
+        </block>
+      </template>
+      <!-- 模板使用 -->
+     <template is='viewTemplate' data="{{...viewTemplateData}}"></template>
+    </view>
+  </view>
+</view>

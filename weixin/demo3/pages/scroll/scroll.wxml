@@ -1,0 +1,20 @@
+<view class="scroll_content">
+   <view class="scroll_body">
+      <block>
+        <view class='product_item' wx:for='{{list}}' wx:key='id' wx:for-index='ind' wx:for-item='product'>
+          <view class='product_item_left'>
+            <image src='{{product.url}}' mode='scaleToFill'></image>
+          </view>
+          <view class='product_item_right'>
+            <view class='product_item_right_section'>
+              <text class='right_listItem_title'>{{product.product_name}}</text>
+              <text class='right_listItem_content'>{{product.product_direction}}</text>
+            </view>
+            <view class='product_item_right_slider'>
+              <text class='slider_time'>{{product.enter_time}}</text>
+            </view>
+          </view>
+        </view>
+      </block>
+   </view>
+</view>

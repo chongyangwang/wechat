@@ -1,0 +1,9 @@
+/**index.wxss**/
+.storage{
+  width:100%;
+}
+button{
+  margin:10rpx 20rpx;
+  flex-grow: 1;
+  font-size: 14px;
+}

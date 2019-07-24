@@ -1,0 +1,7 @@
+<view>
+  <template name='footer'>
+    <view class='foot'>
+        <text>{{pageEndTitle}}</text>
+    </view>
+  </template>
+</view>

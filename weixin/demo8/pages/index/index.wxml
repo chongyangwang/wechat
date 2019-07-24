@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <block>
+    <view class="storage">
+      <button bindtap="setStorage" size="default" type="primary">设置单个存储对象</button>
+    </view>
+    <view class="storage">
+      <button bindtap="setOtherStorage" size="default" type="primary">设置别的存储对象</button>
+    </view>
+    <view class="storage">
+       <view>
+        <text>存储信息为：</text>
+        <text>{{saveMessage}}</text>
+       </view>
+       <view>
+          <button bindtap="getangShowstorage" size="default" type="warn">获得并显示单个对象</button>
+       </view>
+    </view>
+    <view class="storage">
+      <button bindtap="getStorageInfo" size="default" type="warn">获得所有存储对象</button>
+    </view>
+    <view class="storage">
+      <button bindtap="clearStorage" size="default" type="default" disabled="{{disableStatus}}">一键清空存储对象</button>
+    </view>
+  </block>
+</view>

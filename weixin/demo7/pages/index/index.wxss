@@ -1,0 +1,6 @@
+/**index.wxss**/
+.banner{
+  width:100%;
+  height: 240rpx;
+  background: #ccc;
+}

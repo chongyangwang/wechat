@@ -1,0 +1,11 @@
+<view class="demo">
+  <view class="box1" bindtap="handleTap1" catch-bind::touchstart="handleCapture1">
+      盒子1
+      <view class="box2" bindtap="handleTap2" capture-bind:tap="handleCapture2">
+        盒子2
+        <view class="box3" bindtap="handleTap3" capture-bind:tap="handleCapture3">
+          盒子3
+        </view>
+      </view>
+  </view>
+</view>

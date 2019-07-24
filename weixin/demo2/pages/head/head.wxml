@@ -1,0 +1,7 @@
+<view>
+   <template name='header'>
+      <view class='head'>
+        <text>{{pageTitle}}</text>
+      </view>
+   </template>
+</view>

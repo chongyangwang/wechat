@@ -1,0 +1,11 @@
+<!--logs.wxml-->
+<view class="container log-list">
+   <view animation="{{animationData}}" style="background:red;height:100rpx;width:100rpx">
+   </view>
+   <block>
+      <view style="margin-top:30px;">
+      <button bindtap="rotateAndScale" size="mini" type="primary">旋转同时放大</button>
+      <button bindtap="rotateThenScale" size="mini" type="primary">先旋转再放大</button>
+      </view>
+   </block>
+</view>

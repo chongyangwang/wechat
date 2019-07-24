@@ -1,0 +1,43 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/demo/demo",
+    "pages/scroll/scroll",
+    "pages/scrollview/scrollview"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle":"#fff",
+    "navigationBarTitleText":"来啊 造作啊"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "例子"
+      },
+      {
+        "pagePath": "pages/scroll/scroll",
+        "text": "列表"
+      },
+      {
+        "pagePath": "pages/scrollview/scrollview",
+        "text": "滚动"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

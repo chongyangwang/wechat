@@ -1,0 +1,4 @@
+<view class="like_container" bindtap='handelChangeCollectStatus'>
+  <image src="{{like ? highlight_url : dark_url}}"></image>
+  <text>{{count}}</text>
+</view>

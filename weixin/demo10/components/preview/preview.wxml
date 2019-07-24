@@ -1,0 +1,9 @@
+<!--components/preview/preview.wxml-->
+<view class="container">
+  <view class="head">
+    <tag-cmp text="{{typeText}}" tag-class="tag"></tag-cmp>
+    <like-cmp class="like" like="{{true}}" read-only="{{true}}" count="{{classic.fav_nums}}"></like-cmp>
+  </view>
+  <image class="{{classic.type===200?'music-img':'other-img'}}" src="{{classic.image}}"></image>
+  <view class="text">{{classic.content}}</view>
+</view>
